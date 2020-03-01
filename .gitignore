@@ -1,0 +1,7 @@
+node_modules
+logs
+run
+package-lock.json
+yarn.lock
+app/public
+config/config.default.js

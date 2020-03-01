@@ -1,0 +1,65 @@
+{
+  "name": "myblog",
+  "version": "1.0.0",
+  "description": "egg+umi+antd打造个人博客",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run build && egg-scripts start --port=7001 --daemon --title=egg-umi-ssr --env=prod",
+    "stop": "egg-scripts stop --title=egg-umi-ssr",
+    "dev": "egg-bin dev --port=7001 --sticky",
+    "debug": "cross-env RM_TMPDIR=none COMPRESS=none egg-bin debug",
+    "now-build": "npm run prerender",
+    "build": "cross-env UMI_ENV=prod umi build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kstar11/myBlog.git"
+  },
+  "keywords": [
+    "egg",
+    "umi",
+    "antd",
+    "ssr"
+  ],
+  "author": "kstar11",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kstar11/myBlog/issues"
+  },
+  "homepage": "https://github.com/kstar11/myBlog#readme",
+  "dependencies": {
+    "@ant-design/icons": "^4.0.2",
+    "antd": "^4.0.0",
+    "cross-env": "^7.0.0",
+    "egg": "^2.26.0",
+    "egg-mongoose": "^3.2.0",
+    "egg-scripts": "^2.13.0",
+    "egg-view-assets": "^1.6.0",
+    "egg-view-nunjucks": "^2.2.0",
+    "loadsh": "^0.0.4",
+    "moment": "^2.24.0",
+    "prop-types": "^15.7.2",
+    "qs": "^6.9.1",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "react-helmet": "^5.2.1",
+    "react-markdown": "^4.3.1",
+    "react-sticky": "^6.0.3",
+    "ssr-polyfill": "^1.0.1",
+    "umi": "^2.13.3",
+    "umi-server": "^1.2.2",
+    "umi-utils": "^1.7.2",
+    "url": "^0.11.0"
+  },
+  "devDependencies": {
+    "@umijs/fabric": "^2.0.3",
+    "@umijs/plugin-prerender": "^1.8.2",
+    "autod": "^3.1.0",
+    "autod-egg": "^1.1.0",
+    "egg-bin": "^4.14.1",
+    "eslint": "^6.8.0",
+    "eslint-config-egg": "^8.0.1",
+    "redbox-react": "^1.6.0",
+    "umi-plugin-react": "^1.15.2"
+  }
+}

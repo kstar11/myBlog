@@ -1,0 +1,96 @@
+:global {
+  #root {
+    height: 100%;
+  }
+}
+
+.mainContainer {
+  height: 100%;
+  .siderMenu {
+    box-shadow: 1px 0 2px 2px #eee;
+    // overflow: auto;
+    position: relative;
+    .haederBack {
+      height: 160px;
+      background-color: #4d4d4d;
+    }
+    .avatar {
+      width: 160px;
+      margin: 0 auto;
+      transform: translateY(-50%);
+      img {
+        width: 100%;
+        border-radius: 50%;
+      }
+    }
+    .description {
+      transform: translateY(-50px);
+      ul {
+        list-style: none;
+        li {
+          margin: 10px 0;
+        }
+      }
+    }
+    .nickName {
+      transform: translateY(-20px);
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .links {
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        li {
+          text-align: center;
+          height: 60px;
+          a {
+            font-size: 16px;
+          }
+          .linkIcons {
+            font-size: 26px;
+            margin: 0 10px;
+          }
+        }
+      }
+    }
+    .collapsedBar {
+      position: relative;
+      height: 100%;
+      ul {
+        margin: 0;
+        padding: 12px 24px;
+        list-style: none;
+        li {
+          text-align: center;
+          .linkIcons {
+            font-size: 26px;
+            margin: 10px 0;
+            color: #e4e4e4;
+          }
+        }
+      }
+    }
+    .outLinks {
+      position: absolute;
+      bottom: 10px;
+    }
+  }
+  .colTrigger {
+    position: absolute;
+    bottom: 10px;
+    right: -45px;
+    font-size: 26px;
+    cursor: pointer;
+    background-color: #1890ff;
+    color: #fff;
+    padding:2px 8px;
+    border-radius: 4px;
+    z-index: 999;
+  }
+  .content {
+    padding: 40px 18px 12px;
+  }
+}
