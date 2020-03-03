@@ -58,7 +58,7 @@ export default class MainLayout extends PureComponent {
                     <Link to="/">首页</Link>
                   </li>
                   <li>
-                    <Link to="/artical">文章</Link>
+                    <Link to="/article">文章</Link>
                   </li>
                   <li>
                     <Link to="/category">归档</Link>
@@ -99,7 +99,7 @@ export default class MainLayout extends PureComponent {
 
                 <Tooltip placement="right" title="文章">
                   <li>
-                    <Link to="/artical">
+                    <Link to="/article">
                       <BookOutlined className={styles.linkIcons} />
                     </Link>
                   </li>

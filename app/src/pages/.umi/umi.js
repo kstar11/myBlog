@@ -205,7 +205,46 @@ if (!__IS_BROWSER) {
             <link rel="stylesheet" href="http://localhost:8000/umi.css" />
 
             <meta charSet="UTF-8" />
-            <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+            <meta
+              name="viewport"
+              content="width=device-width, initial-scale=1.0"
+            />
+            <meta
+              name="description"
+              content="苍的个人博客,分享记录我的人生脚印"
+            />
+            <meta
+              name="keywords"
+              content="React,Egg,Node,Webpack,MongoDB,技术博客,心得分享"
+            />
+            <title>六咸之首-苍老师</title>
+            <script
+              dangerouslySetInnerHTML={{ __html: `window.g_useSSR=true;` }}
+            />
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `window.routerBase = "/";
+  window.publicPath = "http://localhost:8000/";`,
+              }}
+            />
+          </head>
+          <body>
+            <div id="root">{rootContainer}</div>
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `window.g_initialData = ${stringify(props)};`,
+              }}
+            />
+            <script src="http://localhost:8000/umi.js" />
+          </body>
+        </html>
+      ),
+      '/article': (
+        <html lang="en">
+          <head>
+            <link rel="stylesheet" href="http://localhost:8000/umi.css" />
+
+            <meta charSet="UTF-8" />
             <meta
               name="viewport"
               content="width=device-width, initial-scale=1.0"
@@ -246,7 +285,6 @@ if (!__IS_BROWSER) {
             <link rel="stylesheet" href="http://localhost:8000/umi.css" />
 
             <meta charSet="UTF-8" />
-            <meta http-equiv="X-UA-Compatible" content="IE=edge" />
             <meta
               name="viewport"
               content="width=device-width, initial-scale=1.0"

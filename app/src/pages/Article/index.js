@@ -1,26 +1,27 @@
 import React, { useState, useEffect } from 'react';
+import request from '../../utils/request';
 import { CalendarOutlined } from '@ant-design/icons';
 import { Layout, Card, List, Typography } from 'antd';
 import Link from 'umi/link';
 import moment from 'moment';
 import ReactMarkdown from 'react-markdown';
-import { connect } from 'dva';
 
 import styles from './index.module.less';
 
-function Index(props) {
-  const { app, dispatch } = props;
+function Article() {
+  const [artList, setArtList] = useState([]);
   useEffect(() => {
-    dispatch({
-      type: 'app/fetch',
-      payload: { url: '/api/articles' },
-    });
+    const fetchData = async () => {
+      const result = await request('/api/articles');
+      setArtList(result.data.data);
+    };
+    fetchData();
   }, []);
   return (
     <Layout>
       <List
-        loading={app.dataSource.length < 1}
-        dataSource={app.dataSource}
+        loading={artList.length < 1}
+        dataSource={artList}
         itemLayout="vertical"
         size="large"
         renderItem={item => {
@@ -51,4 +52,4 @@ function Index(props) {
     </Layout>
   );
 }
-export default connect(({ app }) => ({ app }))(Index);
+export default Article;

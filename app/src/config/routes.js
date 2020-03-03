@@ -1,9 +1,19 @@
 export const routes = [
   {
-    exact: true,
     path: '/',
     component: '../layouts/Home/index',
-    routes: [{ path: '/', component: 'index' }],
+    routes: [
+      {
+        exact: true,
+        path: '/',
+        component: 'Index',
+      },
+      {
+        exact: true,
+        path: '/article',
+        component: 'Article',
+      },
+    ],
   },
   { exact: true, path: '/user', component: '../layouts/User/index' },
 ];

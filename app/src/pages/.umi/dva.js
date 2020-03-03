@@ -20,7 +20,7 @@ export function _onCreate() {
     app.use(plugin);
   });
   app.use(require('/Users/mac/Desktop/myBlog/node_modules/dva-immer/dist/index.js')());
-  
+  app.model({ namespace: 'app', ...(require('/Users/mac/Desktop/myBlog/app/src/models/app.js').default) });
   return app;
 }
 

@@ -15,7 +15,6 @@ const Router = routerRedux.ConnectedRouter;
 
 const routes = [
   {
-    exact: true,
     path: '/',
     component: __IS_BROWSER
       ? _dvaDynamic({
@@ -25,14 +24,24 @@ const routes = [
       : require('../../layouts/Home/index').default,
     routes: [
       {
+        exact: true,
         path: '/',
         component: __IS_BROWSER
           ? _dvaDynamic({
               component: () =>
-                import(/* webpackChunkName: "p__index" */ '../index'),
+                import(/* webpackChunkName: "p__Index" */ '../Index'),
             })
-          : require('../index').default,
+          : require('../Index').default,
+      },
+      {
         exact: true,
+        path: '/article',
+        component: __IS_BROWSER
+          ? _dvaDynamic({
+              component: () =>
+                import(/* webpackChunkName: "p__Article" */ '../Article'),
+            })
+          : require('../Article').default,
       },
       {
         component: () =>
