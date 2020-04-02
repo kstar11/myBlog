@@ -149,7 +149,9 @@ export default class MainLayout extends PureComponent {
         </Sider>
         <Layout>
           <Content className={styles.content}>{this.props.children}</Content>
-          {/* <Footer>Footer</Footer> */}
+          <Footer style={{textAlign:'center'}}>
+            <a href="www.beian.miit.gov.cn">ICP备案号:湘ICP备18019737号</a>
+          </Footer>
         </Layout>
       </Layout>
     );

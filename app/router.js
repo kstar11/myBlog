@@ -15,5 +15,9 @@ module.exports = app => {
   router.patch('/api/articles', checkLogin, controller.article.updateArticle);
   router.delete('/api/articles', checkLogin, controller.article.deleteArticle);
   router.get('/api/articles/:id', controller.article.findArticleDetails);
+  router.get('/api/information', controller.information.queryInformation);
+  router.post('/api/information', controller.information.insertInformation);
+  router.patch('/api/information', controller.information.updateInformation);
+  router.delete('/api/information', controller.information.deleteInformation);
   router.get('*', controller.home.index);
 };

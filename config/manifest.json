@@ -1,0 +1,16 @@
+{
+  "vendors.css": "/public/vendors.4dc70b87.chunk.css",
+  "vendors.js": "/public/vendors.37fa497a.async.js",
+  "layouts__Home__index.css": "/public/layouts__Home__index.06277599.chunk.css",
+  "layouts__Home__index.js": "/public/layouts__Home__index.03026d4e.async.js",
+  "layouts__User__index.js": "/public/layouts__User__index.2c7c5b01.async.js",
+  "p__Article.css": "/public/p__Article.0d54f1b4.chunk.css",
+  "p__Article.js": "/public/p__Article.ec414865.async.js",
+  "p__Index.css": "/public/p__Index.8ad7f2a8.chunk.css",
+  "p__Index.js": "/public/p__Index.77a405d4.async.js",
+  "umi.css": "/public/umi.39dc76c4.css",
+  "umi.js": "/public/umi.19a08437.js",
+  "index.html": "/public/index.html",
+  "ssr-client-mainifest.json": "/public/ssr-client-mainifest.json",
+  "static/cang.png": "/public/static/cang.111e90f0.png"
+}
